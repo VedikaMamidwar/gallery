@@ -1,0 +1,103 @@
+/* Body & Background */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #2d1e2f, #472f57);
+    color: white;
+    transition: background 0.5s ease-in-out;
+}
+
+/* Welcome Screen */
+#welcome-screen {
+    margin-top: 15%;
+}
+
+/* Glow Buttons */
+.glow-btn {
+    margin: 10px;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ff758c, #ff7eb3);
+    color: white;
+    border-radius: 50px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #ff758c;
+}
+
+.glow-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff7eb3;
+}
+
+/* Hidden Gallery Initially */
+.hidden {
+    display: none;
+}
+
+/* Gallery Container */
+#gallery-container {
+    position: relative;
+    margin-top: 5%;
+    perspective: 1000px;
+}
+
+
+/* Circular Rotation */
+.circle {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    transform-style: preserve-3d;
+    animation: rotateCircle 10s linear infinite; /* Smooth Rotation */
+}
+
+/* Position images in a circular layout */
+.photo {
+    position: absolute;
+    width: 120px;
+    height: 160px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    transform-origin: center;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+/* Placing Images in a Perfect Circle */
+.photo:nth-child(1)  { transform: rotateY(0deg) translateZ(250px); }
+.photo:nth-child(2)  { transform: rotateY(18deg) translateZ(250px); }
+.photo:nth-child(3)  { transform: rotateY(36deg) translateZ(250px); }
+.photo:nth-child(4)  { transform: rotateY(54deg) translateZ(250px); }
+.photo:nth-child(5)  { transform: rotateY(72deg) translateZ(250px); }
+.photo:nth-child(6)  { transform: rotateY(90deg) translateZ(250px); }
+.photo:nth-child(7)  { transform: rotateY(108deg) translateZ(250px); }
+.photo:nth-child(8)  { transform: rotateY(126deg) translateZ(250px); }
+.photo:nth-child(9)  { transform: rotateY(144deg) translateZ(250px); }
+.photo:nth-child(10) { transform: rotateY(162deg) translateZ(250px); }
+.photo:nth-child(11) { transform: rotateY(180deg) translateZ(250px); }
+.photo:nth-child(12) { transform: rotateY(198deg) translateZ(250px); }
+.photo:nth-child(13) { transform: rotateY(216deg) translateZ(250px); }
+.photo:nth-child(14) { transform: rotateY(234deg) translateZ(250px); }
+.photo:nth-child(15) { transform: rotateY(252deg) translateZ(250px); }
+.photo:nth-child(16) { transform: rotateY(270deg) translateZ(250px); }
+.photo:nth-child(17) { transform: rotateY(288deg) translateZ(250px); }
+.photo:nth-child(18) { transform: rotateY(306deg) translateZ(250px); }
+.photo:nth-child(19) { transform: rotateY(324deg) translateZ(250px); }
+.photo:nth-child(20) { transform: rotateY(342deg) translateZ(250px); }
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Smooth Rotation Animation */
+@keyframes rotateCircle {
+    from { transform: rotateY(0deg); }
+    to   { transform: rotateY(360deg); }
+}
